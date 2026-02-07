@@ -8,14 +8,13 @@
     <a href="https://betterbugs.io?ref=github" target="_blank"><b>Website</b></a> •
     <a href="https://docs.betterbugs.io/" target="_blank"><b>Documentation</b></a> •
     <a href="https://discord.com/invite/HF8XjwVtPh" target="_blank"><b>Join our Community</b></a> • 
-    <a href="https://twitter.com/BetterBugs" target="_blank"><b>Twitter</b></a> •
     <a href="https://www.linkedin.com/company/betterbugs/" target="_blank"><b>LinkedIn</b></a>
 </p>
 
 <div align="center">
 
 <a href="https://discord.com/invite/HF8XjwVtPh"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" /></a>
-<a href="https://twitter.com/BetterBugs"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" /></a>
+<a href="https://twitter.com/BetterBugs"><img src="https://img.shields.io/badge/Follow%20us-X-000000?style=for-the-badge&logoColor=white" /></a>
 <a href="https://www.linkedin.com/company/betterbugs/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 
 </div>
