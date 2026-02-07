@@ -24,6 +24,10 @@
     "url": "https://github.com/betterbugs/dev-tools/issues"
   },
   "homepage": "https://github.com/betterbugs/dev-tools#readme",
+  "engines": {
+    "node": ">=20.8.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
