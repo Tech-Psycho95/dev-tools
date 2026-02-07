@@ -22,7 +22,7 @@
 <div align="center">
     
 <a href="https://www.producthunt.com/products/betterbugs-io" target="_blank">
-<img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=435678&theme=light" alt="BetterBugs - Developer Tools for Modern Development | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+<img src="./public/producthunt.svg" alt="BetterBugs - Developer Tools for Modern Development | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
 </a>
 
 </div>
