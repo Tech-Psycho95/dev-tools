@@ -32,6 +32,8 @@ jobs:
             pull_request)
               TITLE="${{ github.event.pull_request.title }}"
               AUTHOR="${{ github.event.pull_request.user.login }}"
+              AUTHOR_URL="${{ github.event.pull_request.user.html_url }}"
+              AUTHOR_AVATAR="${{ github.event.pull_request.user.avatar_url }}"
               EVENT_URL="${{ github.event.pull_request.html_url }}"
               ACTION="${{ github.event.action }}"
               DESCRIPTION="Pull Request $ACTION: $TITLE"
@@ -40,6 +42,8 @@ jobs:
             issues)
               TITLE="${{ github.event.issue.title }}"
               AUTHOR="${{ github.event.issue.user.login }}"
+              AUTHOR_URL="${{ github.event.issue.user.html_url }}"
+              AUTHOR_AVATAR="${{ github.event.issue.user.avatar_url }}"
               EVENT_URL="${{ github.event.issue.html_url }}"
               ACTION="${{ github.event.action }}"
               DESCRIPTION="Issue $ACTION: $TITLE"
@@ -48,6 +52,8 @@ jobs:
             issue_comment)
               TITLE="${{ github.event.issue.title }}"
               AUTHOR="${{ github.event.comment.user.login }}"
+              AUTHOR_URL="${{ github.event.comment.user.html_url }}"
+              AUTHOR_AVATAR="${{ github.event.comment.user.avatar_url }}"
               EVENT_URL="${{ github.event.comment.html_url }}"
               ACTION="${{ github.event.action }}"
               COMMENT_BODY="${{ github.event.comment.body }}"
@@ -58,6 +64,8 @@ jobs:
             release)
               TITLE="${{ github.event.release.name }}"
               AUTHOR="${{ github.event.release.author.login }}"
+              AUTHOR_URL="${{ github.event.release.author.html_url }}"
+              AUTHOR_AVATAR="${{ github.event.release.author.avatar_url }}"
               EVENT_URL="${{ github.event.release.html_url }}"
               ACTION="${{ github.event.action }}"
               DESCRIPTION="Release $ACTION: $TITLE"
@@ -66,6 +74,8 @@ jobs:
             push)
               TITLE="${{ github.event.ref }}"
               AUTHOR="${{ github.event.pusher.name }}"
+              AUTHOR_URL="${{ github.server_url }}/${{ github.event.pusher.name }}"
+              AUTHOR_AVATAR="https://github.com/${{ github.event.pusher.name }}.png"
               EVENT_URL="$REPO_URL/commit/${{ github.sha }}"
               COMMITS_COUNT="${{ github.event.commits }}"
               COMMITS_COUNT=${#COMMITS_COUNT[@]}
@@ -75,6 +85,8 @@ jobs:
             watch)
               TITLE="Repository Starred"
               AUTHOR="${{ github.event.sender.login }}"
+              AUTHOR_URL="${{ github.event.sender.html_url }}"
+              AUTHOR_AVATAR="${{ github.event.sender.avatar_url }}"
               EVENT_URL="$REPO_URL"
               DESCRIPTION="$AUTHOR starred the repository"
               COLOR="16776960"
@@ -82,6 +94,8 @@ jobs:
             *)
               TITLE="Unknown Event"
               AUTHOR="Unknown"
+              AUTHOR_URL="$REPO_URL"
+              AUTHOR_AVATAR="https://github.com/fluidicon.png"
               EVENT_URL="$REPO_URL"
               DESCRIPTION="Event type: $EVENT_TYPE"
               COLOR="9807270"
@@ -93,6 +107,8 @@ jobs:
           echo "repo_url=$REPO_URL" >> $GITHUB_OUTPUT
           echo "title=$TITLE" >> $GITHUB_OUTPUT
           echo "author=$AUTHOR" >> $GITHUB_OUTPUT
+          echo "author_url=$AUTHOR_URL" >> $GITHUB_OUTPUT
+          echo "author_avatar=$AUTHOR_AVATAR" >> $GITHUB_OUTPUT
           echo "event_url=$EVENT_URL" >> $GITHUB_OUTPUT
           echo "description=$DESCRIPTION" >> $GITHUB_OUTPUT
           echo "color=$COLOR" >> $GITHUB_OUTPUT
@@ -106,14 +122,22 @@ jobs:
             "avatar_url": "https://github.com/fluidicon.png",
             "embeds": [
               {
+                "author": {
+                  "name": "${{ steps.extract.outputs.author }}",
+                  "url": "${{ steps.extract.outputs.author_url }}",
+                  "icon_url": "${{ steps.extract.outputs.author_avatar }}"
+                },
                 "title": "${{ steps.extract.outputs.title }}",
                 "description": "${{ steps.extract.outputs.description }}",
                 "url": "${{ steps.extract.outputs.event_url }}",
                 "color": ${{ steps.extract.outputs.color }},
+                "thumbnail": {
+                  "url": "${{ steps.extract.outputs.author_avatar }}"
+                },
                 "fields": [
                   {
                     "name": "Repository",
-                    "value": "${{ steps.extract.outputs.repo_name }}",
+                    "value": "[${{ steps.extract.outputs.repo_name }}](${{ steps.extract.outputs.repo_url }})",
                     "inline": true
                   },
                   {
@@ -122,13 +146,8 @@ jobs:
                     "inline": true
                   },
                   {
-                    "name": "Author",
-                    "value": "${{ steps.extract.outputs.author }}",
-                    "inline": true
-                  },
-                  {
-                    "name": "Repository Link",
-                    "value": "[${{ steps.extract.outputs.repo_name }}](${{ steps.extract.outputs.repo_url }})",
+                    "name": "User Profile",
+                    "value": "[@${{ steps.extract.outputs.author }}](${{ steps.extract.outputs.author_url }})",
                     "inline": true
                   }
                 ],
