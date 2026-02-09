@@ -49,7 +49,7 @@ With BetterBugs, debugging stops being guesswork and becomes a shared, reliable 
 
 ## BetterBugs Development Tools
 
-This repository contains our free, open-source development utilities—a comprehensive collection of 40+ tools designed to accelerate your development workflow. From text conversion and code formatting to data transformation and validation, our tools eliminate repetitive tasks and help you focus on what matters—building great software.
+This repository contains our free, open-source development utilities—a comprehensive collection of 175+ tools designed to accelerate your development workflow. From text conversion and code formatting to data transformation and validation, our tools eliminate repetitive tasks and help you focus on what matters—building great software.
 
 Built with modern technologies and designed for developers, by developers.
 
@@ -71,7 +71,7 @@ This leads to lost time and frustration when you just need to convert a format o
 
 BetterBugs Development Tools solves this by providing:
 
-- **40+ Tools in One Place**: Everything you need without switching between websites.
+- **175+ Tools in One Place**: Everything you need without switching between websites.
 - **Instant Conversions**: No waiting, no network delays. Real-time results.
 - **Offline Support**: Works perfectly without internet thanks to PWA technology.
 - **Built for Speed**: Optimized performance with Next.js and modern architecture.
@@ -80,7 +80,7 @@ BetterBugs Development Tools solves this by providing:
 
 ## Features
 
-- **40+ Development Tools**: Text manipulation, code formatting, validation, generation, conversion, and more
+- **175+ Development Tools**: Text manipulation, code formatting, validation, generation, conversion, and more
 - **Modern Stack**: Built with Next.js 14, React 18, TypeScript, and Tailwind CSS
 - **Fast & Responsive**: Optimized performance with server-side rendering and instant feedback
 - **PWA Support**: Progressive Web App capabilities for offline access

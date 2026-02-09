@@ -1,8 +1,10 @@
 # Contributing to BetterBugs Development Tools
 
-Thank you for your interest in contributing to our project. We welcome contributions of all kinds including bug reports, feature suggestions, documentation improvements, and code contributions. Your feedback and support help make this project better for everyone.
+Thank you for your interest in contributing! We're building 175+ developer tools with a community-first mindset. We welcome contributions of all kinds: bug reports, feature suggestions, documentation improvements, new tools, and code contributions.
 
-Please read through this document before submitting any issues or pull requests to ensure we have the necessary information to respond effectively.
+**Our philosophy:** Low friction > perfection. We can refine things later. It's much harder to revive an abandoned repo.
+
+Please read through this document before submitting any issues or pull requests. For detailed guides on tool structure, offline support, and more, visit the [Contributing Guides](https://docs.betterbugs.io/contributing-to-betterbugs).
 
 ## Reporting Bugs and Issues
 
@@ -16,13 +18,15 @@ Before reporting a bug, please check our [open issues](https://github.com/better
 - Environment information (browser, OS, Node.js version)
 - Screenshots or error messages if applicable
 
-## Suggesting Enhancements
+## Suggesting Enhancements and New Tools
 
-We welcome ideas for improvements and new tools. Please [create a new issue](https://github.com/betterbugs/dev-tools/issues/new/choose) with your suggestion and include:
+We welcome ideas for improvements and new tools. There's no permission needed—if you have an idea, build it! Please [create an issue](https://github.com/betterbugs/dev-tools/issues/new/choose) or [discussion](https://github.com/betterbugs/dev-tools/discussions) with:
 
-- A clear description of the enhancement
+- A clear description of the enhancement or tool
 - Why this would be useful
 - Any relevant examples or use cases
+
+**Note:** If your tool uses APIs or network features, that's fine! Just make it optional and gracefully handle missing connectivity. See [Contributing Guides](https://docs.betterbugs.io/contributing-to-betterbugs) for details.
 
 ## Self Assigning Issues
 
@@ -33,11 +37,13 @@ To express interest in working on an issue, simply comment on it to let us know.
 Please ensure your pull request adheres to the following guidelines:
 
 - Search [open pull requests](https://github.com/betterbugs/dev-tools/pulls) to ensure your change hasn't already been submitted
-- Target the `develop` branch with your pull request
+- Target the `develop` branch with your pull request (not `main`)
 - Rebase your branch with the latest changes from `develop` before opening your PR
 - Follow the existing code style and conventions
-- Test your changes locally before submitting
+- Test your changes locally: `npm run dev` and `npm run lint`
 - Use TypeScript for all new code
+
+**Adding a new tool?** Check the [Feature and Module Structure](https://docs.betterbugs.io/contributing-to-betterbugs) guide for detailed walkthrough and examples.
 
 ## Commit Messages
 
@@ -75,17 +81,29 @@ Test your changes locally before submitting a pull request:
 - Test on different browsers (Chrome, Firefox, Safari, Edge)
 - Test responsive design on mobile, tablet, and desktop viewports
 - Verify accessibility where applicable
+- **For offline-safe tools:** Test offline mode by running `npm run build && npm start`, then enabling offline in DevTools. See [PWA and Offline Behavior](https://docs.betterbugs.io/contributing-to-betterbugs) for details.
+- **For tools with APIs:** Verify graceful failure when the API is unavailable
 
 ## Documentation
 
 We love documentation contributions! Whether it's more complete descriptions, new examples, or better formatting, any help improving the documentation is appreciated.
 
+## The Only Hard Rule
+
+🚫 **Don't:** Require user login, store personal data, or collect user information.
+
+✅ **Everything else is negotiable:** Network features, APIs, AI integrations—all welcome if implemented thoughtfully.
+
+This keeps us legally sound and makes contributing stress-free.
+
 ## Community
 
 Join us on [Discord](https://discord.com/invite/HF8XjwVtPh) to connect with the community and core team. Please be respectful and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
+**For detailed guides** on tool structure, offline support, contributing philosophy, and more, visit [Contributing Guides](https://docs.betterbugs.io/contributing-to-betterbugs).
+
 ## Questions?
 
-For questions or concerns, please reach out to us at dev@betterbugs.io.
+For questions or concerns, please reach out to us at dev@betterbugs.io or ask in our [Discord community](https://discord.com/invite/HF8XjwVtPh).
 
-Thank you for your interest and contributions to BetterBugs🪲.
+Thank you for your interest and contributions to BetterBugs 🪲
