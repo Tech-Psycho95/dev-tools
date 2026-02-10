@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/betterbugs/dev-tools/compare/v1.3.0...v1.3.1) (2026-02-10)
+
+
+### Bug Fixes
+
+* correct spelling and update descriptions for color conversion tools ([70f373c](https://github.com/betterbugs/dev-tools/commit/70f373ca663401bfb176b13160c88b3326307acf))
+
 # [1.3.0](https://github.com/betterbugs/dev-tools/compare/v1.2.0...v1.3.0) (2026-02-09)
 
 
