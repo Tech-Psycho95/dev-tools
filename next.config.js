@@ -1,9 +1,13 @@
 const path = require('path');
 const runtimeCaching = require('next-pwa/cache');
+
+const isProduction = process.env.NEXT_ENV === 'PRODUCTION';
+const basePath = isProduction ? '/development-tools' : '';
+const assetPrefix = isProduction ? '/development-tools' : '';
+
 let nextConfig = {
-  // This tells the app it lives inside this subpath
-  basePath: '/development-tools',
-  assetPrefix: '/development-tools',
+  basePath: basePath,
+  assetPrefix: assetPrefix,
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
