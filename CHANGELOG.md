@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/betterbugs/dev-tools/compare/v1.3.1...v1.3.2) (2026-02-16)
+
+
+### Bug Fixes
+
+* update basePath and assetPrefix to use conditional logic for production ([b487fef](https://github.com/betterbugs/dev-tools/commit/b487fefbc8de696953ef4ba5cb1c3e55eda7fe7a))
+
 ## [1.3.2-develop.1](https://github.com/betterbugs/dev-tools/compare/v1.3.1...v1.3.2-develop.1) (2026-02-16)
 
 
