@@ -1,3 +1,10 @@
+# [1.4.0-develop.1](https://github.com/betterbugs/dev-tools/compare/v1.3.2...v1.4.0-develop.1) (2026-02-28)
+
+
+### Features
+
+* **ui:** add reusable CopyButton and refactor wordCounter and jsonToTxt ([d5b9e83](https://github.com/betterbugs/dev-tools/commit/d5b9e8333673c5254cf39529a90869b1b741e385)), closes [#17](https://github.com/betterbugs/dev-tools/issues/17)
+
 ## [1.3.2](https://github.com/betterbugs/dev-tools/compare/v1.3.1...v1.3.2) (2026-02-16)
 
 
