@@ -184,6 +184,7 @@ import XmlPrettify from '../components/developmentToolsComponent/xmlPrettify';
 import XmlToJsonConverter from '../components/developmentToolsComponent/xmlToJsonConverter';
 import XorCalculator from '../components/developmentToolsComponent/xorCalculator';
 import CurlToCodeConverter from '../components/developmentToolsComponent/curlToCodeConverter';
+import DnsLookupSimulator from '../components/developmentToolsComponent/dnsLookupSimulator';
 import YAMLFormatterAndBeautifier from '../components/developmentToolsComponent/yamlFormatterAndBeautifier';
 
 export const WEB_URL = 'https://www.betterbugs.io';
@@ -1777,6 +1778,7 @@ export const PATHS = {
   CRONTAB_GENERATOR: '/crontab-generator',
   MORSE_CODE_TRANSLATOR: '/morse-code-translator',
   CURL_TO_CODE_CONVERTER: '/curl-to-code-converter',
+  DNS_LOOKUP_SIMULATOR: '/dns-lookup-simulator',
 };
 
 export const developmentToolsRoutes = [
@@ -2479,6 +2481,10 @@ export const developmentToolsRoutes = [
   {
     path: PATHS.CURL_TO_CODE_CONVERTER,
     component: <CurlToCodeConverter />,
+  },
+  {
+    path: PATHS.DNS_LOOKUP_SIMULATOR,
+    component: <DnsLookupSimulator />,
   },
 ];
 
