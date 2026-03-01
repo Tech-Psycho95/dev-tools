@@ -17262,4 +17262,108 @@ family[1]: "Beth"`,
       og_image: '/images/og-images/Cover.png',
     },
   },
+  [`dns-lookup-simulator`]: {
+    hero_section: {
+      title: 'DNS Lookup Simulator',
+      description:
+        'Query DNS records for any domain instantly. Supports A, AAAA, CNAME, MX, TXT, and NS record types using secure DNS-over-HTTPS providers.',
+    },
+    development_tools_list: [
+      { tool: 'What Is My IP', url: PATHS.WHAT_IS_MY_LOCAL_IP_ADDRESS },
+      { tool: 'What Is My ISP', url: PATHS.WHAT_IS_MY_ISP },
+      { tool: 'What Is My User Agent', url: PATHS.WHAT_IS_MY_USER_AGENT },
+      { tool: 'URL Encode', url: PATHS.URL_ENCODE },
+      { tool: 'URL Decode', url: PATHS.URL_DECODE },
+      { tool: 'Internet Speed Test', url: PATHS.INTERNET_SPEED_TEST },
+    ],
+    development_tools_about_details: {
+      about_title: 'What is the DNS Lookup Simulator?',
+      about_description: [
+        {
+          description:
+            'The DNS Lookup Simulator is a free online tool on BetterBugs.io that allows you to query DNS records for any domain name. It uses secure DNS-over-HTTPS (DoH) providers like Cloudflare and Google to fetch accurate, real-time DNS information.',
+        },
+        {
+          description:
+            'This tool is essential for developers, system administrators, and network engineers who need to debug DNS configurations, verify domain setups, or troubleshoot connectivity issues. It displays comprehensive record details including TTL (Time To Live) values and priority for MX records.',
+        },
+      ],
+    },
+    development_tools_steps_guide: {
+      guide_title: 'Step-by-Step Guide',
+      guide_description: 'Performing a DNS lookup is simple and straightforward:',
+      steps: [
+        {
+          step_key: 'Step 1:',
+          step_title: 'Enter a Domain Name:',
+          step_description:
+            'Type or paste a domain name (e.g., example.com) into the input field. The tool automatically handles URLs with protocols.',
+        },
+        {
+          step_key: 'Step 2:',
+          step_title: 'Select Record Type:',
+          step_description:
+            'Choose the DNS record type you want to query: A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), TXT (text), or NS (nameserver).',
+        },
+        {
+          step_key: 'Step 3:',
+          step_title: 'Choose DNS Provider (Optional):',
+          step_description:
+            'Select between Cloudflare DNS or Google DNS. Both provide reliable, secure lookups with automatic fallback.',
+        },
+        {
+          step_key: 'Step 4:',
+          step_title: 'View and Copy Results:',
+          step_description:
+            'Click Lookup to see the DNS records. Use the copy buttons to copy individual values or all records at once.',
+        },
+      ],
+    },
+    development_tools_how_use: {
+      how_use_title: 'Common Use Cases',
+      how_use_description:
+        'The DNS Lookup Simulator is valuable in many development and operational scenarios:',
+      point: [
+        {
+          title: 'Domain Configuration Verification',
+          description:
+            'Verify that DNS records are correctly configured after making changes to your domain settings or migrating to a new hosting provider.',
+        },
+        {
+          title: 'Email Delivery Troubleshooting',
+          description:
+            'Check MX records to debug email delivery issues and ensure mail servers are properly configured with correct priorities.',
+        },
+        {
+          title: 'SSL/TLS Certificate Validation',
+          description:
+            'Verify TXT records used for domain validation when setting up SSL certificates or other domain verification processes.',
+        },
+        {
+          title: 'CDN and Load Balancer Setup',
+          description:
+            'Confirm CNAME records point to the correct CDN or load balancer endpoints for proper traffic routing.',
+        },
+        {
+          title: 'Security Auditing',
+          description:
+            'Review TXT records for SPF, DKIM, and DMARC configurations to assess email security posture.',
+        },
+        {
+          title: 'DNS Propagation Monitoring',
+          description:
+            'Track TTL values to understand caching behavior and estimate DNS propagation times after record changes.',
+        },
+      ],
+    },
+    meta_data: {
+      meta_title: 'DNS Lookup Simulator — Query DNS Records Online | BetterBugs.io',
+      meta_description:
+        'Free DNS lookup tool to query A, AAAA, CNAME, MX, TXT, and NS records. Uses secure DNS-over-HTTPS with Cloudflare and Google DNS.',
+      og_title: 'DNS Lookup Simulator — BetterBugs.io',
+      og_description:
+        'Query DNS records for any domain instantly. Supports all major record types with TTL and priority information.',
+      og_image: '/images/og-images/Cover.png',
+    },
+  },
 };
