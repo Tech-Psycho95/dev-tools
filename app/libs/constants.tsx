@@ -1599,6 +1599,14 @@ export const developmentToolsCategoryContent: any = {
         'Convert cURL commands to JavaScript (Fetch/Axios), Python Requests, Go, or Node.js code instantly.',
     },
   ],
+  Category177: [
+    {
+      url: '/dns-lookup-simulator',
+      title: 'DNS Lookup Simulator',
+      description:
+        'Query DNS records (A, AAAA, CNAME, MX, TXT, NS) for any domain using secure DNS-over-HTTPS.',
+    },
+  ],
 };
 
 export const PATHS = {
